@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus Mart – Checkout</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="checkout.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">Nexus <span>Mart</span></div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="cart.html">Cart</a>
+        </div>
+    </nav>
+
+    <h2 class="cart-title">Checkout</h2>
+
+    <div class="checkout-container">
+
+        <!-- Address Form -->
+        <div class="address-box">
+            <h3>Delivery Address</h3>
+
+            <label>Full Name</label>
+            <input type="text" id="nameInput" placeholder="Your Name">
+
+            <label>Phone Number</label>
+            <input type="number" id="phoneInput" placeholder="9999999999">
+
+            <label>House / Flat / Street</label>
+            <input type="text" id="streetInput" placeholder="Street Address">
+
+            <label>City</label>
+            <input type="text" id="cityInput" placeholder="City">
+
+            <label>Pincode</label>
+            <input type="number" id="pinInput" placeholder="6-digit PIN">
+
+            <button class="order-btn" id="placeOrderBtn">Place Order</button>
+        </div>
+
+        <!-- Summary -->
+        <div class="checkout-summary">
+            <h3>Order Summary</h3>
+            <p>Items: <span id="itemCount">0</span></p>
+            <p>Total Price: ₹<span id="totalPrice">0</span></p>
+        </div>
+
+    </div>
+
+</body>
+</html>
