@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nexus Mart Admin Dashboard</title>
+  <link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+
+  <nav class="admin-nav">
+    <h1>Nexus Mart — Admin Panel</h1>
+  </nav>
+
+  <div class="admin-container">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <button onclick="showSection('products')">Products</button>
+      <button onclick="showSection('addProduct')">Add Product</button>
+      <button onclick="showSection('orders')">Orders</button>
+      <button onclick="showSection('categories')">Categories</button>
+      <button onclick="showSection('analytics')">AI Analytics</button>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+      <!-- PRODUCT LIST -->
+      <section id="products" class="section">
+        <h2>All Products</h2>
+        <div id="productList"></div>
+      </section>
+
+      <!-- ADD PRODUCT -->
+      <section id="addProduct" class="section hidden">
+        <h2>Add New Product</h2>
+
+        <form id="addProductForm">
+          <input type="text" id="pName" placeholder="Product Name" required>
+          <input type="number" id="pPrice" placeholder="Price" required>
+          <input type="text" id="pCategory" placeholder="Category" required>
+          <input type="number" id="pStock" placeholder="Stock Count" required>
+          <input type="number" id="pRange" placeholder="Max Delivery Range (km)" required>
+          <input type="file" id="pImage" accept="image/*" required>
+          <button type="submit">Add Product</button>
+        </form>
+      </section>
+
+      <!-- ORDERS -->
+      <section id="orders" class="section hidden">
+        <h2>Orders</h2>
+        <div id="orderList"></div>
+      </section>
+
+      <!-- CATEGORIES -->
+      <section id="categories" class="section hidden">
+        <h2>Manage Categories</h2>
+        <form id="categoryForm">
+          <input type="text" id="categoryName" placeholder="New Category" required>
+          <button>Add Category</button>
+        </form>
+
+        <h3>Existing Categories</h3>
+        <ul id="categoryList"></ul>
+      </section>
+
+      <!-- AI ANALYTICS -->
+      <section id="analytics" class="section hidden">
+        <h2>AI Analytics</h2>
+        <canvas id="aiChart"></canvas>
+      </section>
+
+    </main>
+
+  </div>
+
+  <script src="admin.js"></script>
+</body>
+</html>
