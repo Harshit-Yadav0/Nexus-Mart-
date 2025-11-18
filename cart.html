@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta viewport="width=device-width, initial-scale=1.0">
+    <title>Nexus Mart – Cart</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="cart.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">Nexus <span>Mart</span></div>
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+        </div>
+    </nav>
+
+    <h2 class="cart-title">Your Cart 🛒</h2>
+
+    <div class="cart-container">
+        <div id="cartItems"></div>
+
+        <div class="cart-summary">
+            <h3>Order Summary</h3>
+            <p>Total Items: <span id="itemCount">0</span></p>
+            <p>Total Price: ₹<span id="totalPrice">0</span></p>
+
+            <a href="checkout.html">
+                <button class="checkout-btn">Proceed to Checkout</button>
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>
